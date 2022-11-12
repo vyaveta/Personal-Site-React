@@ -6,7 +6,8 @@ import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import Resume from './resume.pdf';
+
+import { Link } from "react-scroll";
 
 const Services = () => {
   // context
@@ -24,16 +25,16 @@ const Services = () => {
       {/* left side */}
       <div className="awesome">
         {/* dark mode */}
-        <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
+        <span style={{ color: darkMode ? "white" : "" }}>My Sublime</span>
         <span>services</span>
-        <spane>
-          Lorem ispum is simpley dummy text of printing of printing Lorem
+        <span>
+          Contact me if you want any help for your
           <br />
-          ispum is simpley dummy text of printing
-        </spane>
-        <a href={Resume} download>
-          <button className="button s-button">Download CV</button>
-        </a>
+           college projects and other bussiness ideas.
+        </span>
+       <Link to="contact" spy={true} smooth={true}>
+        <button className="button s-button">Contact</button>
+        </Link>
         <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
       </div>
       {/* right */}
@@ -46,8 +47,8 @@ const Services = () => {
         >
           <Card
             emoji={HeartEmoji}
-            heading={"Design"}
-            detail={"Figma, Sketch, Photoshop, Adobe Illustrator, Adobe xd"}
+            heading={"FrontEnd"}
+            detail={"React, Css,Bootstrap,Javascript"}
           />
         </motion.div>
         {/* second card */}
@@ -58,8 +59,8 @@ const Services = () => {
         >
           <Card
             emoji={Glasses}
-            heading={"Developer"}
-            detail={"Html, Css, JavaScript, React, Nodejs, Express"}
+            heading={"BackEnd"}
+            detail={"Nodejs, Express, Mongodb"}
           />
         </motion.div>
         {/* 3rd */}
@@ -70,9 +71,9 @@ const Services = () => {
         >
           <Card
             emoji={Humble}
-            heading={"UI/UX"}
+            heading={"Other"}
             detail={
-              "Lorem ispum dummy text are usually use in section where we need some random text"
+              "Communication, Leadership , Consistency"
             }
             color="rgba(252, 166, 31, 0.45)"
           />
